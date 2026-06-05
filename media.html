@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Interaktif - Pancasila</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://3.bp.blogspot.com/-62rdxxijZgw/U-2T6NIztxI/AAAAAAAAgZ0/fBY1-o_KoaA/s1600/GARUDA_PANCASILA_COLOR.jpg" type="image/jpeg">
+  <script type="module" src="index.js"></script>
+</head>
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo-section">
+          <div class="logo">
+            <img src="https://3.bp.blogspot.com/-62rdxxijZgw/U-2T6NIztxI/AAAAAAAAgZ0/fBY1-o_KoaA/s1600/GARUDA_PANCASILA_COLOR.jpg" alt="Garuda Pancasila">
+          </div>
+          <div class="bpip-logo">
+            <span class="bpip-text">Pancasila sebagai Nilai Moral <br>dan Etika di Era Modern</span>
+            <span class="bpip-subtitle">REPUBLIK INDONESIA</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="fenomena.html" class="nav-link">Fenomena Sosial</a>
+          <a href="nilai.html" class="nav-link">Nilai Moral dan Etika</a>
+          <a href="media.html" class="nav-link">Media Interaktif</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <h1>Media Interaktif</h1>
+  </header>
+
+  <section class="section">
+    <div class="box-container">
+      <h2 class="tujuan-title">Media Pembelajaran Pancasila</h2>
+      <div class="box-wrapper">
+        <div class="box pancasila">
+          <h3>Video Edukasi</h3>
+          <br>
+          <p>Tonton video-video edukatif tentang Pancasila dan penerapannya dalam kehidupan sehari-hari.</p>
+          <div class="video-selection">
+            <label for="videoSelect">Pilih Video:</label>
+            <select  id="videoSelect" class="video-select">
+              <option value="">-- Pilih Video --</option>
+            </select>
+          </div>
+          <div id="videoDisplay" class="video-display" style="display: none;">
+            <h4 id="videoTitle"></h4>
+            <iframe id="videoFrame" width="100%" height="300" src="" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p id="videoDescription"></p>
+          </div>
+          <div id="videoLoading" class="loading-text" style="display: none;">Memuat video...</div>
+        </div>
+        <div class="box pancasila">
+          <h3>Kuis Interaktif</h3>
+          <br>
+          <p>Uji pemahaman Anda tentang nilai-nilai Pancasila melalui kuis interaktif yang menarik.</p>
+          <p><strong>Fitur:</strong> Pertanyaan pilihan ganda, skor instan, dan penjelasan jawaban.</p>
+          <button id="startQuizBtn" class="quiz-button">Mulai Kuis</button>
+        </div>
+        <div class="box pancasila">
+          <h3>Infografis</h3>
+          <br>
+          <p>Jelajahi infografis visual yang menjelaskan setiap sila Pancasila dengan cara yang mudah dipahami.</p>
+          <div class="infographic-container">
+            <div class="infographic-item">
+              <h4>Sila 1: Ketuhanan Yang Maha Esa</h4>
+              <div class="infographic-visual sila1">
+                <div class="sila-symbol">✦</div>
+                <div class="sila-content">
+                  <p><strong>Nilai Utama:</strong> Kepercayaan, ketakwaan, toleransi</p>
+                  <p><strong>Implementasi:</strong> Menghargai perbedaan agama, beribadah dengan teknologi</p>
+                </div>
+              </div>
+            </div>
+            <div class="infographic-item">
+              <h4>Sila 2: Kemanusiaan yang Adil dan Beradab</h4>
+              <div class="infographic-visual sila2">
+                <div class="sila-symbol">⚖</div>
+                <div class="sila-content">
+                  <p><strong>Nilai Utama:</strong> Kemanusiaan, keadilan, kesetaraan</p>
+                  <p><strong>Implementasi:</strong> Anti-cyberbullying, menghargai privasi</p>
+                </div>
+              </div>
+            </div>
+            <div class="infographic-item">
+              <h4>Sila 3: Persatuan Indonesia</h4>
+              <div class="infographic-visual sila3">
+                <div class="sila-symbol">🌏</div>
+                <div class="sila-content">
+                  <p><strong>Nilai Utama:</strong> Persatuan, nasionalisme, cinta tanah air</p>
+                  <p><strong>Implementasi:</strong> Bahasa Indonesia baik, anti-ujaran kebencian</p>
+                </div>
+              </div>
+            </div>
+            <div class="infographic-item">
+              <h4>Sila 4: Kerakyatan yang Dipimpin Hikmat Kebijaksanaan</h4>
+              <div class="infographic-visual sila4">
+                <div class="sila-symbol">🗳</div>
+                <div class="sila-content">
+                  <p><strong>Nilai Utama:</strong> Demokrasi, musyawarah, gotong royong</p>
+                  <p><strong>Implementasi:</strong> Diskusi konstruktif, menghargai pendapat</p>
+                </div>
+              </div>
+            </div>
+            <div class="infographic-item">
+              <h4>Sila 5: Keadilan Sosial bagi Seluruh Rakyat Indonesia</h4>
+              <div class="infographic-visual sila5">
+                <div class="sila-symbol">⚖</div>
+                <div class="sila-content">
+                  <p><strong>Nilai Utama:</strong> Keadilan sosial, kesejahteraan bersama</p>
+                  <p><strong>Implementasi:</strong> Donasi online, dukung UMKM digital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box pancasila">
+          <h3>Komentar</h3>
+          <br>
+          <p>Berikan komentar dan masukan Anda tentang konten media interaktif ini.</p>
+          <p><strong>Contoh:</strong> Saran peningkatan, pertanyaan, atau umpan balik.</p>
+          <button id="showCommentFormBtn" class="quiz-button">Tulis Komentar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Section (Hidden by default) -->
+  <section id="quizSection" class="section" style="display: none;">
+    <div class="box-container">
+      <h2 class="tujuan-title">Kuis Pancasila</h2>
+      <div class="quiz-container">
+        <div id="quizProgress" class="quiz-progress">
+          <span id="currentQuestion">1</span> / <span id="totalQuestions">5</span>
+        </div>
+        <div id="questionContainer" class="question-container">
+          <h3 id="questionText" class="question-text"></h3>
+          <div id="optionsContainer" class="options-container"></div>
+          <div id="feedbackContainer" class="feedback-container"></div>
+          <button id="nextBtn" class="quiz-button" style="display: none;">Pertanyaan Selanjutnya</button>
+        </div>
+        <div id="resultContainer" class="result-container" style="display: none;">
+          <h3>Hasil Kuis</h3>
+          <p id="finalScore" class="final-score"></p>
+          <p id="scoreMessage" class="score-message"></p>
+          <button id="restartBtn" class="quiz-button">Ulangi Kuis</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment Section (Hidden by default) -->
+  <section id="commentSection" class="section" style="display: none;">
+    <div class="box-container">
+      <h2 class="tujuan-title">Komentar & Masukan</h2>
+      <div class="comment-container">
+        <!-- Comment Form -->
+        <div class="comment-form-container">
+          <h3>Tulis Komentar Baru</h3>
+          <form id="commentForm">
+            <div class="form-group">
+              <label for="commentName">Nama:</label>
+              <input type="text" id="commentName" required placeholder="Nama Anda">
+            </div>
+            <div class="form-group">
+              <label for="commentEmail">Email (opsional):</label>
+              <input type="email" id="commentEmail" placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="commentText">Komentar:</label>
+              <textarea id="commentText" required rows="4" placeholder="Tulis komentar Anda di sini..."></textarea>
+            </div>
+            <button type="submit" class="quiz-button">Kirim Komentar</button>
+          </form>
+        </div>
+
+        <!-- Comments Display -->
+        <div class="comments-display">
+          <h3>Komentar Terbaru</h3>
+          <div id="commentsList" class="comments-list">
+            <p class="loading-text">Memuat komentar...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Tentang Saya</h3>
+        <p>Website edukasi untuk mempromosikan nilai-nilai Pancasila sebagai pedoman moral dan etika di era modern dan penyelesaian tugas akhir Mata kuliah Pancasila.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Kontak</h3>
+        <p>Email: nothing@gmail.com</p>
+        <p>Telepon: 08123456789</p>
+      </div>
+      <div class="footer-section">
+        <h3>Tautan</h3>
+        <a href="index.html">Beranda</a>
+        <a href="fenomena.html">Fenomena Sosial</a>
+        <a href="nilai.html">Nilai Moral dan Etika</a>
+        <a href="media.html">Media Interaktif</a>
+      </div>
+      <div class="footer-section">
+        <h3>Sosial Media</h3>
+        <a href="https://www.instagram.com/jmarcellinoo?utm_source=qr&igsh=d3R1M2NjOWsybGVu">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 J Marcellino Chrisland Siahaan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Quiz Functionality -->
+  <script type="module">
+    import { getQuizQuestions, saveQuizResult, addComment, getComments, getVideos } from './index.js';
+
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let userAnswers = [];
+
+    // DOM Elements
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const showCommentFormBtn = document.getElementById('showCommentFormBtn');
+    const commentSection = document.getElementById('commentSection');
+    const commentForm = document.getElementById('commentForm');
+    const commentsList = document.getElementById('commentsList');
+    const quizSection = document.getElementById('quizSection');
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const feedbackContainer = document.getElementById('feedbackContainer');
+    const nextBtn = document.getElementById('nextBtn');
+    const resultContainer = document.getElementById('resultContainer');
+    const questionContainer = document.getElementById('questionContainer');
+    const currentQuestionSpan = document.getElementById('currentQuestion');
+    const totalQuestionsSpan = document.getElementById('totalQuestions');
+    const finalScore = document.getElementById('finalScore');
+    const scoreMessage = document.getElementById('scoreMessage');
+    const restartBtn = document.getElementById('restartBtn');
+
+    // Video Functionality
+    const videoSelect = document.getElementById('videoSelect');
+    const videoDisplay = document.getElementById('videoDisplay');
+    const videoTitle = document.getElementById('videoTitle');
+    const videoFrame = document.getElementById('videoFrame');
+    const videoDescription = document.getElementById('videoDescription');
+    const videoLoading = document.getElementById('videoLoading');
+
+    // Load videos from database
+    async function loadVideos() {
+      try {
+        videoLoading.style.display = 'block';
+        const videos = await getVideos();
+        
+        videoSelect.innerHTML = '<option value="">-- Pilih Video --</option>';
+        
+        if (videos.length === 0) {
+          videoSelect.innerHTML = '<option value="">-- Tidak ada video --</option>';
+          videoLoading.style.display = 'none';
+          return;
+        }
+        
+        // Remove duplicates by nomor
+        const seenNumbers = new Set();
+        const uniqueVideos = [];
+        
+        videos.forEach(video => {
+          if (!seenNumbers.has(video.nomor)) {
+            seenNumbers.add(video.nomor);
+            uniqueVideos.push(video);
+          }
+        });
+        
+        uniqueVideos.forEach(video => {
+          const option = document.createElement('option');
+          option.value = video.id;
+          option.textContent = `${video.nomor}. ${video.judul}`;
+          videoSelect.appendChild(option);
+        });
+        
+        videoLoading.style.display = 'none';
+      } catch (error) {
+        console.error('Error loading videos:', error);
+        videoSelect.innerHTML = '<option value="">-- Gagal memuat video --</option>';
+        videoLoading.style.display = 'none';
+      }
+    }
+
+    // Handle video selection
+    videoSelect.addEventListener('change', async (e) => {
+      const videoId = e.target.value;
+      
+      if (!videoId) {
+        videoDisplay.style.display = 'none';
+        return;
+      }
+      
+      try {
+        videoLoading.style.display = 'block';
+        videoDisplay.style.display = 'none';
+        
+        const videos = await getVideos();
+        const selectedVideo = videos.find(v => v.id === videoId);
+        
+        if (selectedVideo) {
+          videoTitle.textContent = selectedVideo.judul;
+          videoFrame.src = selectedVideo.url;
+          videoDescription.textContent = selectedVideo.deskripsi;
+          videoDisplay.style.display = 'block';
+        }
+        
+        videoLoading.style.display = 'none';
+      } catch (error) {
+        console.error('Error loading video:', error);
+        videoLoading.style.display = 'none';
+      }
+    });
+
+    // Load videos on page load
+    loadVideos();
+
+    // Comment Functionality
+    showCommentFormBtn.addEventListener('click', () => {
+      commentSection.style.display = 'block';
+      loadComments();
+      commentSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Load comments from Firebase
+    async function loadComments() {
+      try {
+        commentsList.innerHTML = '<p class="loading-text">Memuat komentar...</p>';
+        const comments = await getComments();
+        
+        if (comments.length === 0) {
+          commentsList.innerHTML = '<p class="no-comments">Belum ada komentar. Jadilah yang pertama berkomentar!</p>';
+          return;
+        }
+        
+        commentsList.innerHTML = '';
+        comments.forEach(comment => {
+          const commentDiv = document.createElement('div');
+          commentDiv.className = 'comment-item';
+          commentDiv.innerHTML = `
+            <div class="comment-header">
+              <span class="comment-name">${comment.nama}</span>
+              <span class="comment-date">${new Date(comment.tanggal).toLocaleDateString('id-ID', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })}</span>
+            </div>
+            <p class="comment-text">${comment.komentar}</p>
+          `;
+          commentsList.appendChild(commentDiv);
+        });
+      } catch (error) {
+        console.error('Error loading comments:', error);
+        commentsList.innerHTML = '<p class="error-text">Gagal memuat komentar. Pastikan Firebase Firestore sudah diaktifkan.</p>';
+      }
+    }
+
+    // Handle comment form submission
+    commentForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const nama = document.getElementById('commentName').value;
+      const email = document.getElementById('commentEmail').value;
+      const komentar = document.getElementById('commentText').value;
+      
+      try {
+        await addComment({
+          nama: nama,
+          email: email || null,
+          komentar: komentar,
+          tanggal: new Date().toISOString()
+        });
+        
+        // Clear form
+        commentForm.reset();
+        
+        // Reload comments
+        await loadComments();
+        
+        alert('Komentar berhasil dikirim!');
+      } catch (error) {
+        console.error('Error adding comment:', error);
+        alert('Gagal mengirim komentar. Pastikan Firebase Firestore sudah diaktifkan.');
+      }
+    });
+
+    // Start Quiz
+    startQuizBtn.addEventListener('click', async () => {
+      try {
+        questions = await getQuizQuestions();
+        if (questions.length === 0) {
+          alert('Belum ada soal kuis di database. Silakan tambahkan soal terlebih dahulu.');
+          return;
+        }
+        
+        currentQuestionIndex = 0;
+        score = 0;
+        userAnswers = [];
+        
+        quizSection.style.display = 'block';
+        questionContainer.style.display = 'block';
+        resultContainer.style.display = 'none';
+        
+        totalQuestionsSpan.textContent = questions.length;
+        displayQuestion();
+        
+        // Scroll to quiz section
+        quizSection.scrollIntoView({ behavior: 'smooth' });
+      } catch (error) {
+        console.error('Error loading quiz questions:', error);
+        alert('Gagal memuat soal kuis. Pastikan Firebase Firestore sudah diaktifkan.');
+      }
+    });
+
+    // Display Question
+    function displayQuestion() {
+      const question = questions[currentQuestionIndex];
+      questionText.textContent = `${question.nomor}. ${question.pertanyaan}`;
+      currentQuestionSpan.textContent = currentQuestionIndex + 1;
+      
+      optionsContainer.innerHTML = '';
+      feedbackContainer.innerHTML = '';
+      nextBtn.style.display = 'none';
+      
+      question.pilihan.forEach((option, index) => {
+        const optionBtn = document.createElement('button');
+        optionBtn.className = 'option-button';
+        optionBtn.textContent = option;
+        optionBtn.addEventListener('click', () => selectAnswer(index));
+        optionsContainer.appendChild(optionBtn);
+      });
+    }
+
+    // Select Answer
+    function selectAnswer(selectedIndex) {
+      const question = questions[currentQuestionIndex];
+      const isCorrect = selectedIndex === question.jawaban_benar;
+      
+      if (isCorrect) {
+        score++;
+      }
+      
+      userAnswers.push({
+        question: question.pertanyaan,
+        selected: question.pilihan[selectedIndex],
+        correct: question.pilihan[question.jawaban_benar],
+        isCorrect: isCorrect
+      });
+      
+      // Disable all options
+      const options = optionsContainer.querySelectorAll('.option-button');
+      options.forEach((btn, index) => {
+        btn.disabled = true;
+        if (index === question.jawaban_benar) {
+          btn.style.backgroundColor = '#4CAF50';
+          btn.style.color = 'white';
+        } else if (index === selectedIndex && !isCorrect) {
+          btn.style.backgroundColor = '#f44336';
+          btn.style.color = 'white';
+        }
+      });
+      
+      // Show feedback
+      feedbackContainer.innerHTML = `
+        <p class="feedback-text ${isCorrect ? 'correct' : 'incorrect'}">
+          ${isCorrect ? '✓ Benar!' : '✗ Salah!'}
+        </p>
+        <p class="explanation-text">${question.penjelasan}</p>
+      `;
+      
+      nextBtn.style.display = 'block';
+    }
+
+    // Next Question
+    nextBtn.addEventListener('click', () => {
+      currentQuestionIndex++;
+      
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+      } else {
+        showResults();
+      }
+    });
+
+    // Show Results
+    function showResults() {
+      questionContainer.style.display = 'none';
+      resultContainer.style.display = 'block';
+      
+      const percentage = (score / questions.length) * 100;
+      finalScore.textContent = `Skor Anda: ${score} / ${questions.length} (${percentage.toFixed(0)}%)`;
+      
+      let message = '';
+      if (percentage >= 80) {
+        message = 'Luar biasa! Pemahaman Anda tentang Pancasila sangat baik.';
+      } else if (percentage >= 60) {
+        message = 'Bagus! Terus tingkatkan pemahaman Anda tentang Pancasila.';
+      } else if (percentage >= 40) {
+        message = 'Cukup baik, tapi perlu belajar lebih lagi tentang Pancasila.';
+      } else {
+        message = 'Jangan menyerah! Pelajari lagi materi Pancasila dan coba lagi.';
+      }
+      
+      scoreMessage.textContent = message;
+      
+      // Save result to Firebase
+      saveQuizResult({
+        score: score,
+        total: questions.length,
+        percentage: percentage,
+        tanggal: new Date().toISOString(),
+        jawaban: userAnswers
+      }).catch(error => console.error('Error saving quiz result:', error));
+    }
+
+    // Restart Quiz
+    restartBtn.addEventListener('click', () => {
+      currentQuestionIndex = 0;
+      score = 0;
+      userAnswers = [];
+      
+      questionContainer.style.display = 'block';
+      resultContainer.style.display = 'none';
+      
+      displayQuestion();
+    });
+  </script>
+</body>
+</html>
