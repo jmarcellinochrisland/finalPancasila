@@ -249,7 +249,7 @@
     }
 
     // Uncomment the line below to add sample questions to Firebase
-    addSampleQuizQuestions();
+    // addSampleQuizQuestions();
 
     // Check if questions were added successfully
     async function checkQuestionsInFirebase() {
@@ -269,63 +269,6 @@
 
     // Check after 3 seconds to ensure questions are added
     setTimeout(checkQuestionsInFirebase, 3000);
-    // Remove duplicate videos before adding new ones
-    await removeDuplicateVideos();
-    // Sample Videos - Uncomment to add to Firebase
-    async function addSampleVideos() {
-      const videos = [
-        {
-          nomor: 1,
-          judul: "Sejarah Pancasila",
-          url: "https://www.youtube.com/embed/eFmWmkdz494",
-          deskripsi: "Video ini menjelaskan sejarah perumusan Pancasila oleh PPKI."
-        },
-        {
-          nomor: 2,
-          judul: "Makna Sila-sila Pancasila",
-          url: "https://youtu.be/966L7VlBy-0",
-          deskripsi: "Pemahaman mendalam tentang makna setiap sila Pancasila."
-        },
-        {
-          nomor: 3,
-          judul: "Implementasi Pancasila di Era Modern",
-          url: "https://www.youtube.com/embed/kK7k7k7k7k7",
-          deskripsi: "Cara menerapkan nilai-nilai Pancasila dalam kehidupan digital."
-        }
-      ];
-
-      try {
-        for (const video of videos) {
-          await addVideo(video);
-          console.log(`Video ${video.nomor} added successfully`);
-        }
-        console.log('All sample videos added to Firebase!');
-      } catch (error) {
-        console.error('Error adding sample videos:', error);
-      }
-    }
-
-    // Uncomment the line below to add sample videos to Firebase
-    addSampleVideos();
-
-    // Check if videos were added successfully
-    async function checkVideosInFirebase() {
-      try {
-        const { getAllDocuments } = await import('./index.js');
-        const videos = await getAllDocuments('video');
-        console.log('=== Videos in Firebase ===');
-        console.log('Total videos:', videos.length);
-        videos.forEach((v, index) => {
-          console.log(`${index + 1}. ${v.judul}`);
-        });
-        console.log('===========================');
-      } catch (error) {
-        console.error('Error checking videos:', error);
-      }
-    }
-
-    // Check after 3 seconds to ensure videos are added
-    setTimeout(checkVideosInFirebase, 3000);
   </script>
 </body>
 </html>
