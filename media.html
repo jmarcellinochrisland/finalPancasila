@@ -27,6 +27,7 @@
           <a href="fenomena.html" class="nav-link">Fenomena Sosial</a>
           <a href="nilai.html" class="nav-link">Nilai Moral dan Etika</a>
           <a href="media.html" class="nav-link">Media Interaktif</a>
+          <a href="kesimpulan.html" class="nav-link">Kesimpulan</a>
         </div>
       </div>
     </nav>
@@ -208,6 +209,7 @@
         <a href="fenomena.html">Fenomena Sosial</a>
         <a href="nilai.html">Nilai Moral dan Etika</a>
         <a href="media.html">Media Interaktif</a>
+        <a href="kesimpulan.html">Kesimpulan</a>
       </div>
       <div class="footer-section">
         <h3>Sosial Media</h3>
@@ -271,21 +273,10 @@
           return;
         }
         
-        // Remove duplicates by nomor
-        const seenNumbers = new Set();
-        const uniqueVideos = [];
-        
         videos.forEach(video => {
-          if (!seenNumbers.has(video.nomor)) {
-            seenNumbers.add(video.nomor);
-            uniqueVideos.push(video);
-          }
-        });
-        
-        uniqueVideos.forEach(video => {
           const option = document.createElement('option');
           option.value = video.id;
-          option.textContent = `${video.nomor}. ${video.judul}`;
+          option.textContent = video.judul;
           videoSelect.appendChild(option);
         });
         

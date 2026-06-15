@@ -27,6 +27,7 @@
           <a href="fenomena.html" class="nav-link">Fenomena Sosial</a>
           <a href="nilai.html" class="nav-link">Nilai Moral dan Etika</a>
           <a href="media.html" class="nav-link">Media Interaktif</a>
+          <a href="kesimpulan.html" class="nav-link">Kesimpulan</a>
         </div>
       </div>
     </nav>
@@ -151,10 +152,11 @@
       </div>
       <div class="footer-section">
         <h3>Tautan</h3>
-        <a href="#beranda">Beranda</a>
-        <a href="#fenomena-sosial">Fenomena Sosial</a>
-        <a href="#nilai-moral">Nilai Moral dan Etika</a>
-        <a href="#media-interaktif">Media Interaktif</a>
+        <a href="index.html">Beranda</a>
+        <a href="fenomena.html">Fenomena Sosial</a>
+        <a href="nilai.html">Nilai Moral dan Etika</a>
+        <a href="media.html">Media Interaktif</a>
+        <a href="kesimpulan.html">Kesimpulan</a>
       </div>
       <div class="footer-section">
         <h3>Sosial Media</h3>
@@ -168,113 +170,5 @@
     </div>
   </footer>
 
-  <!-- Example Database Usage -->
-  <script type="module">
-    import { addData, getAllDocuments, getDocument, updateDocument, deleteDocument, queryDocuments, addQuizQuestion, addVideo, removeDuplicateVideos } from './index.js';
-
-    // Sample Quiz Questions - Uncomment to add to Firebase
-    async function addSampleQuizQuestions() {
-      const questions = [
-        {
-          nomor: 1,
-          pertanyaan: "Apa makna dari Sila Pertama Pancasila?",
-          pilihan: [
-            "Ketuhanan Yang Maha Esa",
-            "Kemanusiaan yang Adil dan Beradab",
-            "Persatuan Indonesia",
-            "Keadilan Sosial bagi Seluruh Rakyat Indonesia"
-          ],
-          jawaban_benar: 0,
-          penjelasan: "Sila Pertama adalah Ketuhanan Yang Maha Esa, yang menunjukkan bahwa bangsa Indonesia adalah bangsa yang religius."
-        },
-        {
-          nomor: 2,
-          pertanyaan: "Sila keempat menekankan pentingnya?",
-          pilihan: [
-            "Persatuan bangsa",
-            "Musyawarah dan demokrasi",
-            "Keadilan sosial",
-            "Ketuhanan"
-          ],
-          jawaban_benar: 1,
-          penjelasan: "Sila Keempat adalah Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan."
-        },
-        {
-          nomor: 3,
-          pertanyaan: "Apa implementasi Sila Ketiga di era digital?",
-          pilihan: [
-            "Menghina agama lain",
-            "Menggunakan bahasa Indonesia dengan baik di media sosial",
-            "Menyebarkan hoaks",
-            "Cyberbullying"
-          ],
-          jawaban_benar: 1,
-          penjelasan: "Implementasi Sila Ketuhanan di era digital adalah menggunakan bahasa Indonesia dengan baik dan tidak memprovokasi perpecahan."
-        },
-        {
-          nomor: 4,
-          pertanyaan: "Sila Kelima menekankan pentingnya?",
-          pilihan: [
-            "Demokrasi",
-            "Keadilan sosial bagi seluruh rakyat",
-            "Persatuan",
-            "Kemanusiaan"
-          ],
-          jawaban_benar: 1,
-          penjelasan: "Sila Kelima adalah Keadilan Sosial bagi Seluruh Rakyat Indonesia."
-        },
-        {
-          nomor: 5,
-          pertanyaan: "Apa yang dimaksud dengan gotong royong digital?",
-          pilihan: [
-            "Hacking sistem orang lain",
-            "Berkolaborasi dan membantu sesama secara online",
-            "Menyebarkan konten negatif",
-            "Tidak menghargai privasi"
-          ],
-          jawaban_benar: 1,
-          penjelasan: "Gotong royong digital adalah berkolaborasi dan membantu sesama melalui platform digital."
-        }
-      ];
-
-      try {
-        for (const question of questions) {
-          await addQuizQuestion(question);
-          console.log(`Question ${question.nomor} added successfully`);
-        }
-        console.log('All sample questions added to Firebase!');
-      } catch (error) {
-        console.error('Error adding sample questions:', error);
-      }
-    }
-
-    // Uncomment the line below to add sample questions to Firebase
-    // addSampleQuizQuestions();
-
-    // Check if questions were added successfully
-    async function checkQuestionsInFirebase() {
-      try {
-        const { getAllDocuments } = await import('./index.js');
-        const questions = await getAllDocuments('kuis');
-        console.log('=== Questions in Firebase ===');
-        console.log('Total questions:', questions.length);
-        questions.forEach((q, index) => {
-          console.log(`${index + 1}. ${q.pertanyaan}`);
-        });
-        console.log('============================');
-      } catch (error) {
-        console.error('Error checking questions:', error);
-      }
-    }
-
-    // Check after 3 seconds to ensure questions are added
-    setTimeout(checkQuestionsInFirebase, 3000);
-  </script>
 </body>
 </html>
-
-
-
-
-
-
